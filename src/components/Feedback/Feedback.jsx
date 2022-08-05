@@ -14,15 +14,12 @@ export default function Feedback() {
       case 'good':
         setGood(good => good + 1);
         break;
-
       case 'neutral':
         setNeutral(neutral => neutral + 1);
         break;
-
       case 'bad':
         setBad(bad => bad + 1);
         break;
-
       default:
         return;
     }
@@ -42,10 +39,10 @@ export default function Feedback() {
   const options = ['good', 'neutral', 'bad'];
   const total = countTotalFeedback();
   const feedback = countPositiveFeedbackPercentage();
+
   return (
     <>
       <SectionTitle title={'Please leave feedback'}>
-        ,
         <FeedbackOptions
           options={options}
           voteForIncriment={voteForIncriment}
